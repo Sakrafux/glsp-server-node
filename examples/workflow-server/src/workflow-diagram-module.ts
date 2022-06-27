@@ -14,6 +14,7 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 import {
+    BindingTarget,
     CommandPaletteActionProvider,
     ContextMenuItemProvider,
     DiagramConfiguration,
@@ -29,7 +30,6 @@ import {
     PopupModelFactory,
     ServerModule
 } from '@eclipse-glsp/server-node';
-import { BindingTarget } from '@eclipse-glsp/server-node/lib/di/binding-target';
 import { injectable } from 'inversify';
 import { CreateAutomatedTaskHandler } from './handler/create-automated-task-handler';
 import { CreateCategoryHandler } from './handler/create-category-handler';

@@ -16,8 +16,8 @@
 import { Action, MaybePromise, RequestEditValidationAction, SetEditValidationResultAction, ValidationStatus } from '@eclipse-glsp/protocol';
 import { inject, injectable } from 'inversify';
 import { ActionHandler } from '../../actions/action-handler';
-import { ContextEditValidatorRegistry } from '../../features/directediting/context-edit-validator-registry';
 import { Logger } from '../../utils/logger';
+import { ContextEditValidatorRegistry } from './context-edit-validator-registry';
 
 @injectable()
 export class RequestEditValidationHandler implements ActionHandler {

@@ -38,7 +38,8 @@
     "css"
   ],
   "dependencies": {
-    "@eclipse-glsp/protocol": "next"
+    "@eclipse-glsp/protocol": "next",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/uuid": "8.3.1"

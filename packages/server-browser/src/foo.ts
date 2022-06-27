@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2022 STMicroelectronics and others.
+ * Copyright (c) 2022 EclipseSource and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -13,11 +13,4 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-export * from '@eclipse-glsp/server-common';
-export * from './abstract-json-model-storage';
-export * from './di/app-module';
-export * from './gmodel-lib';
-export * from './launch/cli-parser';
-export * from './launch/glsp-server-launcher';
-export * from './launch/socket-cli-parser';
-export * from './launch/socket-server-launcher';
+export const foo = 'bar';

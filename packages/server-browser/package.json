@@ -1,7 +1,7 @@
 {
-  "name": "@eclipse-glsp/server-node",
+  "name": "@eclipse-glsp/server-browser",
   "version": "0.9.0",
-  "description": "A node server framework for GLSP (Common)",
+  "description": "A js server framework for GLSP (Common)",
   "license": "(EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0)",
   "keywords": [
     "eclipse",
@@ -23,10 +23,6 @@
   "bugs": "https://github.com/eclipse-glsp/glsp/issues",
   "contributors": [
     {
-      "name": "STMicroelectronics",
-      "url": "https://www.st.com/"
-    },
-    {
       "name": "Eclipse GLSP Project",
       "email": "glsp-dev@eclipse.org",
       "url": "https://projects.eclipse.org/projects/ecd.glsp"
@@ -39,12 +35,7 @@
   "dependencies": {
     "@eclipse-glsp/server-common": "0.9.0",
     "inversify": "5.1.1",
-    "commander": "^8.3.0",
-    "winston": "^3.3.3",
     "@types/uuid": "8.3.1"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^9.0.13"
   },
   "scripts": {
     "clean": "rimraf tsconfig.tsbuildinfo lib",

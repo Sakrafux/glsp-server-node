@@ -13,11 +13,13 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-export * from '@eclipse-glsp/server-common';
-export * from './abstract-json-model-storage';
-export * from './di/app-module';
-export * from './gmodel-lib';
-export * from './launch/cli-parser';
-export * from './launch/glsp-server-launcher';
-export * from './launch/socket-cli-parser';
-export * from './launch/socket-server-launcher';
+
+export * from './apply-label-edit-operation-handler';
+export * from './change-bounds-operation-handler';
+export * from './computed-bounds-action-handler';
+export * from './delete-operation-handler';
+export * from './gmodel-create-edge-operation-handler';
+export * from './gmodel-create-node-operation-handler';
+export * from './gmodel-diagram-module';
+export * from './paste-operation-handler';
+export * from './reconnect-edge-operation-handler';

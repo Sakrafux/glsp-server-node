@@ -13,13 +13,19 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import { MaybePromise, RequestModelAction, SaveModelAction, TypeGuard } from '@eclipse-glsp/protocol';
+import {
+    GLSPServerError,
+    MaybePromise,
+    ModelState,
+    RequestModelAction,
+    SaveModelAction,
+    SourceModelStorage,
+    SOURCE_URI_ARG,
+    TypeGuard
+} from '@eclipse-glsp/server-common';
 import * as fs from 'fs-extra';
 import { inject, injectable } from 'inversify';
 import { fileURLToPath } from 'url';
-import { GLSPServerError } from '../../utils/glsp-server-error';
-import { ModelState, SOURCE_URI_ARG } from './model-state';
-import { SourceModelStorage } from './source-model-storage';
 
 /**
  * An abstract implementation of {@link SourceModelStorage} that provides utility methods for loading and saving JSON source models

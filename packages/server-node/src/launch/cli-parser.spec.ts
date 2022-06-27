@@ -13,9 +13,9 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+import { LogLevel } from '@eclipse-glsp/server-common';
 import { expect } from 'chai';
 import * as path from 'path';
-import { LogLevel } from '../utils/logger';
 import { createCliParser, defaultLaunchOptions } from './cli-parser';
 
 describe('test createCliParser', () => {

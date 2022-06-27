@@ -14,9 +14,7 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 import { Args, EditorContext, NavigationTarget } from '@eclipse-glsp/protocol';
-import { ModelState } from '@eclipse-glsp/server-node';
-import { JsonOpenerOptions } from '@eclipse-glsp/server-node/lib/features/navigation/json-opener-options';
-import { NavigationTargetProvider } from '@eclipse-glsp/server-node/lib/features/navigation/navigation-target-provider';
+import { JsonOpenerOptions, ModelState, NavigationTargetProvider } from '@eclipse-glsp/server-node';
 import { inject, injectable } from 'inversify';
 import { TaskNode } from '../graph-extension';
 

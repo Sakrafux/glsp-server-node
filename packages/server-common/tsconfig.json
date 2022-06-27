@@ -5,8 +5,7 @@
     "outDir": "lib",
     "reactNamespace": "JSX",
     "baseUrl": "src",
-    "types": ["mocha"]
+    "types": ["node", "mocha", "reflect-metadata"]
   },
-  "include": ["src"],
-  "exclude": ["**/*.spec.ts"]
+  "include": ["src"]
 }

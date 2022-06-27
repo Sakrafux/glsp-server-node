@@ -15,12 +15,12 @@
  ********************************************************************************/
 import { Action, flatPush, MaybeArray, RequestAction, ResponseAction, UpdateModelAction } from '@eclipse-glsp/protocol';
 import { inject, injectable } from 'inversify';
-import { ActionHandler } from '../actions/action-handler';
 import { ClientActionKinds, ClientId } from '../di/service-identifiers';
 import { Disposable } from '../utils/disposable';
 import { GLSPServerError } from '../utils/glsp-server-error';
 import { Logger } from '../utils/logger';
 import { PromiseQueue } from '../utils/promise-queue';
+import { ActionHandler } from './action-handler';
 import { ActionHandlerRegistry } from './action-handler-registry';
 
 export const ActionDispatcher = Symbol('ActionDispatcher');

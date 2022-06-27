@@ -13,11 +13,9 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import { MaybePromise } from '@eclipse-glsp/protocol';
+
+import { InjectionContainer, Logger, MaybePromise, ServerModule } from '@eclipse-glsp/server-common';
 import { Container, ContainerModule, inject, injectable, optional } from 'inversify';
-import { ServerModule } from '../di/server-module';
-import { InjectionContainer } from '../di/service-identifiers';
-import { Logger } from '../utils/logger';
 
 @injectable()
 export abstract class GLSPServerLauncher<T = undefined> {

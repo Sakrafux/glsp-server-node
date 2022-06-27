@@ -13,11 +13,10 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+import { GLSPServer, JsonRpcGLSPServer, Logger } from '@eclipse-glsp/server-common';
 import { Container, inject, injectable } from 'inversify';
 import * as net from 'net';
 import * as jsonrpc from 'vscode-jsonrpc';
-import { GLSPServer, JsonRpcGLSPServer } from '../protocol/glsp-server';
-import { Logger } from '../utils/logger';
 import { GLSPServerLauncher } from './glsp-server-launcher';
 const START_UP_COMPLETE_MSG = '[GLSP-Server]:Startup completed';
 

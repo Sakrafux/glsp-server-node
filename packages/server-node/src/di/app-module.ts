@@ -13,13 +13,10 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+import { InjectionContainer, Logger, LoggerFactory, LogLevel, ModuleContext, WinstonLogger } from '@eclipse-glsp/server-common';
 import { ContainerModule, interfaces } from 'inversify';
 import * as winston from 'winston';
 import { LaunchOptions } from '../launch/cli-parser';
-import { Logger, LoggerFactory, LogLevel } from '../utils/logger';
-import { WinstonLogger } from '../utils/winston-logger';
-import { ModuleContext } from './glsp-module';
-import { InjectionContainer } from './service-identifiers';
 
 export function createAppModule(options: LaunchOptions): ContainerModule {
     return new ContainerModule((bind, unbind, isBound, rebind) => {

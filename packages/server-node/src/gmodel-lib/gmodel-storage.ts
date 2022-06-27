@@ -13,13 +13,18 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import { GGraph, GModelElementSchema } from '@eclipse-glsp/graph';
-import { MaybePromise, RequestModelAction, SaveModelAction } from '@eclipse-glsp/protocol';
+import {
+    GGraph,
+    GModelElementSchema,
+    GModelSerializer,
+    Logger,
+    MaybePromise,
+    ModelState,
+    RequestModelAction,
+    SaveModelAction
+} from '@eclipse-glsp/server-common';
 import { inject, injectable } from 'inversify';
-import { AbstractJsonModelStorage } from '../features/model/abstract-json-model-storage';
-import { GModelSerializer } from '../features/model/gmodel-serializer';
-import { ModelState } from '../features/model/model-state';
-import { Logger } from '../utils/logger';
+import { AbstractJsonModelStorage } from '../abstract-json-model-storage';
 
 export const EMPTY_ROOT = GGraph.builder().id('empty').build();
 
