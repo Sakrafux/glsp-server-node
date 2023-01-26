@@ -1,6 +1,6 @@
-# Eclipse GLSP - Node Server
+# Eclipse GLSP - Server
 
-A typescript implementation of the [GLSP Server](https://github.com/eclipse-glsp/glsp-server).
+A typescript implementation of the Java [GLSP Server](https://github.com/eclipse-glsp/glsp-server).
 
 ## More information
 

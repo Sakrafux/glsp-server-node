@@ -1,7 +1,7 @@
 {
   "name": "@eclipse-glsp/server-node",
   "version": "1.1.0-next",
-  "description": "A node.js server framework for GLSP",
+  "description": "A js server framework for Eclipse GLSP",
   "keywords": [
     "eclipse",
     "graphics",
@@ -32,11 +32,20 @@
       "url": "https://projects.eclipse.org/projects/ecd.glsp"
     }
   ],
-  "main": "lib/index",
-  "types": "lib/index",
+  "main": "lib/node/index",
+  "browser": {
+    "lib/node/index": "lib/browser/index"
+  },
+  "types": "lib/common/index",
   "files": [
     "lib",
-    "src"
+    "src",
+    "node.js",
+    "node.d.ts",
+    "browser.d.ts",
+    "browser.js",
+    "common.d.ts",
+    "common.js"
   ],
   "scripts": {
     "build": "tsc -b",

@@ -3,9 +3,7 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "lib",
-    "reactNamespace": "JSX",
-    "baseUrl": "src",
-    "types": ["node", "mocha", "reflect-metadata"]
+    "baseUrl": "src"
   },
   "include": ["src"]
 }
