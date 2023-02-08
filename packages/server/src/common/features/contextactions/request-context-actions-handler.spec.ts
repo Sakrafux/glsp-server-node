@@ -15,7 +15,7 @@
  ********************************************************************************/
 import { PaletteItem, RequestContextActions, SetContextActions } from '@eclipse-glsp/protocol';
 import { expect } from 'chai';
-import { OperationHandlerRegistry } from '../../operations/operation-handler-registry';
+import { OperationHandlerRegistry } from '../../operation/operation-handler-registry';
 import * as mock from '../../test/mock-util';
 import { ContextActionsProvider } from './context-actions-provider';
 import { ContextActionsProviderRegistry } from './context-actions-provider-registry';

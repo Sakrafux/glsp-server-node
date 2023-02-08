@@ -88,10 +88,10 @@ import { PopupModelFactory } from '../features/popup/popup-model-factory';
 import { RequestPopupModelActionHandler } from '../features/popup/request-popup-model-action-handler';
 import { ModelValidator } from '../features/validation/model-validator';
 import { RequestMarkersHandler } from '../features/validation/request-markers-handler';
-import { CompoundOperationHandler } from '../operations/compound-operation-handler';
-import { OperationActionHandler } from '../operations/operation-action-handler';
-import { OperationHandlerConstructor, OperationHandlerFactory } from '../operations/operation-handler';
-import { OperationHandlerRegistry, OperationHandlerRegistryInitializer } from '../operations/operation-handler-registry';
+import { CompoundOperationHandler } from '../operation/compound-operation-handler';
+import { OperationActionHandler } from '../operation/operation-action-handler';
+import { OperationHandlerConstructor, OperationHandlerFactory } from '../operation/operation-handler';
+import { OperationHandlerRegistry, OperationHandlerRegistryInitializer } from '../operation/operation-handler-registry';
 import { ClientSessionInitializer } from '../session/client-session-initializer';
 import { applyBindingTarget, applyOptionalBindingTarget, BindingTarget } from './binding-target';
 import { GLSPModule } from './glsp-module';
@@ -254,6 +254,19 @@ export abstract class DiagramModule extends GLSPModule {
         return DefaultGModelSerializer;
     }
 
+    /**
+     * Returns the {@link BindingTarget} for the {@link GModelIndex} class.
+     * If overridden typically a {@link ServiceTarget} is returned as this ensures that both
+     * `@inject(GModelIndex)` and `@inject(MyCustomIndex)` can be used and resolve
+     * to the same instance.
+     *
+     * Example:
+     * ```ts
+     *  protected override bindGModelIndex():BindingTarget<GModelIndex> {
+     *     return { service: MyCustomIndex};
+     *  }
+     *```
+     */
     protected bindGModelIndex(): BindingTarget<GModelIndex> {
         return GModelIndex;
     }

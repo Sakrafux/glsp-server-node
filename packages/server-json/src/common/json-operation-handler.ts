@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2022-2023 EclipseSource and others.
+ * Copyright (c) 2023 EclipseSource and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -14,18 +14,20 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 
+import { AnyObject, Command, ModelState, OperationHandler, RecordingCommand } from '@eclipse-glsp/server';
 import { inject, injectable } from 'inversify';
-import { Command } from '../command/command';
-import { GModelRecordingCommand } from '../command/recording-command';
-import { GModelSerializer } from '../features/model/gmodel-serializer';
-import { OperationHandler } from '../operation/operation-handler';
+import { JsonModelIndex } from './json-model-index';
+import { JsonModelState } from './json-model-state';
 
 injectable();
-export abstract class GModelOperationHandler extends OperationHandler {
-    @inject(GModelSerializer)
-    protected serializer: GModelSerializer;
+export abstract class JsonOperationHandler extends OperationHandler {
+    @inject(ModelState)
+    protected override modelState: JsonModelState<AnyObject>;
+
+    @inject(JsonModelIndex)
+    protected index: JsonModelIndex;
 
     protected commandOf(runnable: () => void): Command {
-        return new GModelRecordingCommand(this.modelState, this.serializer, runnable);
+        return new RecordingCommand(this.modelState.modelSource, runnable);
     }
 }

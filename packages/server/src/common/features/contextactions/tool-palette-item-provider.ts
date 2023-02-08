@@ -23,8 +23,8 @@ import {
     PaletteItem
 } from '@eclipse-glsp/protocol';
 import { inject, injectable } from 'inversify';
-import { CreateOperationHandler } from '../../operations/create-operation-handler';
-import { OperationHandlerRegistry } from '../../operations/operation-handler-registry';
+import { CreateOperationHandler } from '../../operation/create-operation-handler';
+import { OperationHandlerRegistry } from '../../operation/operation-handler-registry';
 import { ContextActionsProvider } from './context-actions-provider';
 
 /**

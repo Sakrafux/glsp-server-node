@@ -39,10 +39,10 @@ export class GModelIndex {
 
     indexRoot(root: GModelRoot): void {
         this.clear();
-        this.doIndex(root);
+        this.doRootIndex(root);
     }
 
-    protected doIndex(element: GModelElement): void {
+    protected doRootIndex(element: GModelElement): void {
         if (this.idToElement.has(element.id)) {
             throw new GLSPServerError('Duplicate ID in model: ' + element.id);
         }
@@ -51,7 +51,7 @@ export class GModelIndex {
         typeSet.push(element);
         this.typeToElements.set(element.type, typeSet);
         (element.children ?? []).forEach(child => {
-            this.doIndex(child);
+            this.doRootIndex(child);
             // Double check wether the parent reference of the child is set correctly
             if (!child.parent) {
                 child.parent = element;

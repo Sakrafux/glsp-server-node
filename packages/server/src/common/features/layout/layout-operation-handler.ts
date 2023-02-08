@@ -18,7 +18,7 @@ import { inject, injectable, optional } from 'inversify';
 import { Command } from '../../command/command';
 import { GModelRecordingCommand } from '../../command/recording-command';
 import { DiagramConfiguration, ServerLayoutKind } from '../../diagram/diagram-configuration';
-import { OperationHandler } from '../../operations/operation-handler';
+import { OperationHandler } from '../../operation/operation-handler';
 import { Logger } from '../../utils/logger';
 import { GModelSerializer } from '../model/gmodel-serializer';
 import { LayoutEngine } from './layout-engine';

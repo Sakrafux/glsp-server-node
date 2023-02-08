@@ -69,7 +69,7 @@ export class ModelSubmissionHandler {
         if (this.diagramConfiguration.needsClientLayout) {
             return [RequestBoundsAction.create(root), SetDirtyStateAction.create(this.commandStack.isDirty, { reason })];
         }
-        return [SetModelAction.create(root)];
+        return this.submitModelDirectly(reason);
     }
 
     /**

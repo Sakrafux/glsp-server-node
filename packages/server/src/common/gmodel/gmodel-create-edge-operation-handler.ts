@@ -19,7 +19,7 @@ import { GNode } from '@eclipse-glsp/graph/lib/gnode';
 import { CreateEdgeOperation, MaybePromise, TriggerEdgeCreationAction } from '@eclipse-glsp/protocol';
 import { injectable } from 'inversify';
 import { Command } from '../command/command';
-import { CreateOperationHandler, CreateOperationKind } from '../operations/create-operation-handler';
+import { CreateOperationHandler } from '../operation/create-operation-handler';
 import { GModelOperationHandler } from './gmodel-operation-handler';
 
 /**
@@ -29,7 +29,7 @@ import { GModelOperationHandler } from './gmodel-operation-handler';
  */
 @injectable()
 export abstract class GModelCreateEdgeOperationHandler extends GModelOperationHandler implements CreateOperationHandler {
-    override readonly operationType: CreateOperationKind = CreateEdgeOperation.KIND;
+    override readonly operationType = CreateEdgeOperation.KIND;
     abstract override label: string;
     abstract elementTypeIds: string[];
 

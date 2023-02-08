@@ -67,6 +67,7 @@ export class OperationActionHandler implements ActionHandler {
         const command = await handler.execute(operation);
         if (command) {
             this.executeCommand(command);
+            //
         }
         return this.modelSubmissionHandler.submitModel('operation');
     }

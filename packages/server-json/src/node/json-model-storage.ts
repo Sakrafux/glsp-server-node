@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2022-2023 EclipseSource and others.
+ * Copyright (c) 2023 EclipseSource and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -13,19 +13,27 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-
+import {
+    AbstractJsonModelStorage,
+    AnyObject,
+    MaybePromise,
+    ModelState,
+    RequestModelAction,
+    SaveModelAction
+} from '@eclipse-glsp/server/node';
 import { inject, injectable } from 'inversify';
-import { Command } from '../command/command';
-import { GModelRecordingCommand } from '../command/recording-command';
-import { GModelSerializer } from '../features/model/gmodel-serializer';
-import { OperationHandler } from '../operation/operation-handler';
+import { JsonModelState } from '../common';
 
-injectable();
-export abstract class GModelOperationHandler extends OperationHandler {
-    @inject(GModelSerializer)
-    protected serializer: GModelSerializer;
+@injectable()
+export class JsonSourceModelStorage extends AbstractJsonModelStorage {
+    @inject(ModelState)
+    protected modelState: JsonModelState<AnyObject>;
 
-    protected commandOf(runnable: () => void): Command {
-        return new GModelRecordingCommand(this.modelState, this.serializer, runnable);
+    loadSourceModel(action: RequestModelAction): MaybePromise<void> {
+        const sourceUri = this.getSourceUri(action);
+    }
+
+    saveSourceModel(action: SaveModelAction): MaybePromise<void> {
+        throw new Error('Method not implemented.');
     }
 }

@@ -22,7 +22,7 @@ import { RequestClipboardDataActionHandler } from '../features/clipboard/request
 import { GModelFactory, GModelFactoryNullImpl } from '../features/model/gmodel-factory';
 import { DefaultModelState, ModelState } from '../features/model/model-state';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { OperationHandler, OperationHandlerConstructor } from '../operations/operation-handler';
+import { OperationHandler, OperationHandlerConstructor } from '../operation/operation-handler';
 import { GModelApplyLabelEditOperationHandler } from './apply-label-edit-operation-handler';
 import { GModelChangeBoundsOperationHandler } from './change-bounds-operation-handler';
 import { GModelChangeRoutingPointsOperationHandler } from './change-routing-points-operation-handler';

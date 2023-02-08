@@ -19,7 +19,7 @@ import { CreateNodeOperation, MaybePromise, Point, SelectAction, TriggerNodeCrea
 import { inject, injectable } from 'inversify';
 import { ActionDispatcher } from '../actions/action-dispatcher';
 import { Command } from '../command/command';
-import { CreateOperationHandler, CreateOperationKind } from '../operations/create-operation-handler';
+import { CreateOperationHandler, CreateOperationKind } from '../operation/create-operation-handler';
 import { getRelativeLocation } from '../utils/layout-util';
 import { GModelOperationHandler } from './gmodel-operation-handler';
 

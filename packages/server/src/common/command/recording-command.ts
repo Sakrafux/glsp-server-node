@@ -104,7 +104,6 @@ export class GModelRecordingCommand extends AbstractRecordingCommand<GModelRootS
 
     override execute(): void {
         super.execute();
-        this.modelState.index.indexRoot(this.modelState.root);
     }
 
     protected getJsonObject(): GModelRootSchema {

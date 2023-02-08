@@ -13,10 +13,10 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import { OperationHandlerRegistry } from '../../operations/operation-handler-registry';
+import { expect } from 'chai';
+import { OperationHandlerRegistry } from '../../operation/operation-handler-registry';
 import * as mock from '../../test/mock-util';
 import { DefaultToolPaletteItemProvider } from './tool-palette-item-provider';
-import { expect } from 'chai';
 
 describe('Test DefaultToolPaletteItemProvider', () => {
     const operationHandlerRegistry = new OperationHandlerRegistry();
